@@ -35,26 +35,31 @@ if "messages" not in st.session_state:
     st.session_state.chat_active = True
 
 with st.sidebar:
-    st.info(" * This app uses the OpenAI API to generate text, please provide your API key."
+    st.info(" * This app uses the Anthropic API to generate text, please provide your API key."
             "\n\n * This app uses the 'gpt-4o-mini-2024-07-18' model. Cost effective and efficient."
             "\n\n * If you don't have an API key, you can get one [here](https://platform.openai.com/signup)."
             "\n\n * You can also find the source code for this app [here](https://github.com/mesutdmn/Autonomous-Multi-Agent-Systems-with-CrewAI-Essay-Writer)"
             "\n\n * App keys are not stored or saved in any way."
             "\n\n * Writing essay may take some time, please be patient. Approximately 1-2 minutes."
             "\n\n * If you like this app, consider buying me a coffee ☕")
-    openai_key_input = st.text_input("OpenAI API Key", type="password")
+#    openai_key_input = st.text_input("OpenAI API Key", type="password")
+    llm_key_input = st.text_input("API Key", type="password")
     developer_mode = st.checkbox("I don't have key, use developer's money 😓", value=False)
-    openai_key = openai_key_input or (st.secrets["OpenAI_API_KEY"] if developer_mode else "")
+#    openai_key = openai_key_input or (st.secrets["OpenAI_API_KEY"] if developer_mode else "")
+    llm_key = llm_key_input
 
 
 
 
 def initialize_agents():
-    os.environ["OPENAI_API_KEY"] = openai_key
+#    os.environ["OPENAI_API_KEY"] = openai_key
+    os.environ["ANTHROPIC_API_KEY"] = llm_key
     essay_writer = EssayWriter().graph
 
-    if len(openai_key) < 1:
-        st.error("Please enter your OpenAI API key and Initialize the agents.")
+#    if len(openai_key) < 1:
+    if len(llm_key) < 1:
+#        st.error("Please enter your OpenAI API key and Initialize the agents.")
+        st.error("Please enter your API key and Initialize the agents.")
 
         st.session_state.chat_active = True
     else:
