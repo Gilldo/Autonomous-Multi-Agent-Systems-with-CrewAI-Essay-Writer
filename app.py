@@ -36,7 +36,7 @@ if "messages" not in st.session_state:
 
 with st.sidebar:
     st.info(" * This app uses the Anthropic API to generate text, please provide your API key."
-            "\n\n * This app uses the 'gpt-4o-mini-2024-07-18' model. Cost effective and efficient."
+            "\n\n * This app uses Anthropic's Claude model. Cost effective and efficient."
             "\n\n * If you don't have an API key, you can get one [here](https://platform.openai.com/signup)."
             "\n\n * You can also find the source code for this app [here](https://github.com/mesutdmn/Autonomous-Multi-Agent-Systems-with-CrewAI-Essay-Writer)"
             "\n\n * App keys are not stored or saved in any way."
