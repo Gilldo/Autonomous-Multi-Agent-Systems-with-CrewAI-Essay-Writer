@@ -3,10 +3,6 @@ from extra_tools import search_wikipedia, scrap_webpage
 from pydantic import BaseModel, Field
 from typing import List, TypedDict
 
-#added this line for figuring out the problem with the llm mode I keep getting
-llm = LLM(
-    model="anthropic/claude-3-5-sonnet-20240620"
-)
 
 class Paragraph(TypedDict):
     sub_header: str
