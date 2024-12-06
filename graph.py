@@ -34,9 +34,9 @@ class RouteQuery(BaseModel):
 class EssayWriter:
     def __init__(self):
 #        self.model = ChatOpenAI(model="gpt-4o-mini-2024-07-18", temperature=0)
-        self.model = ChatAnthropic(model="claude-3-5-sonnet-20240620")
+        self.model = ChatAnthropic(model="claude-3-5-sonnet-20240620", temperature=0)
 #        self.crew = CrewClass(llm=ChatOpenAI(model="gpt-4o-mini-2024-07-18", temperature=0.5))
-        self.crew = CrewClass(llm=ChatAnthropic(model="claude-3-5-sonnet-20240620"))
+        self.crew = CrewClass(llm=ChatAnthropic(model="claude-3-5-sonnet-20240620",temperature=0.5))
         self.memory = ConversationBufferMemory()
         self.essay = {}
         self.router_prompt = """
