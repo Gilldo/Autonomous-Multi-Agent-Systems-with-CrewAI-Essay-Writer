@@ -5,8 +5,7 @@ from typing import List, TypedDict
 
 #added this line for figuring out the problem with the llm mode I keep getting
 llm = LLM(
-    model="anthropic/claude-3-sonnet-20240229-v1:0",
-    temperature=0.7
+    model="anthropic/claude-3-5-sonnet-20240620"
 )
 
 class Paragraph(TypedDict):
