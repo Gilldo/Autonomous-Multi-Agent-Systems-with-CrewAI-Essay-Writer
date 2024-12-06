@@ -17,6 +17,7 @@ from crew import CrewClass, Essay
 #added this line for figuring out the problem with the llm mode I keep getting
 #llm = LLM(model="anthropic/claude-3-5-sonnet-20240620")
 model = ChatAnthropic(model="claude-3-5-sonnet-20240620")
+llm='claude-3-5-sonnet-20240620'
 
 class GraphState(TypedDict):
     topic: str
