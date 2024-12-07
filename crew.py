@@ -1,8 +1,8 @@
-from crewai import Agent, Task, Crew, Process, llm
+from crewai import Agent, Task, Crew, Process
 from extra_tools import search_wikipedia, scrap_webpage
 from pydantic import BaseModel, Field
 from typing import List, TypedDict
-
+llm="claude-3-5-sonnet-20240620"
 
 class Paragraph(TypedDict):
     sub_header: str
