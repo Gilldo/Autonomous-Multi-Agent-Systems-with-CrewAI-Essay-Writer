@@ -9,7 +9,7 @@ from typing import List, TypedDict
 llm= LLM(
     model="anthropic/claude-3-5-sonnet-20240620",
     base_url="https://openrouter.ai/api/v1",
-    llm_key=llm_key_input
+#    llm_key=llm_key_input
 )
 
 
