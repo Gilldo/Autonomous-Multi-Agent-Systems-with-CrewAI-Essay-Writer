@@ -12,7 +12,7 @@ from langchain.prompts import PromptTemplate
 from langchain.memory import ConversationBufferMemory
 from pdf_writer import generate_pdf
 
-from crew import CrewClass, Essay
+from crew import CrewClass, Essay, LLM
 
 #added this line for figuring out the problem with the llm mode I keep getting
 #llm = LLM(model="anthropic/claude-3-5-sonnet-20240620")

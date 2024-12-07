@@ -1,4 +1,4 @@
-from crewai import Agent, Task, Crew, Process
+from crewai import Agent, Task, Crew, Process, LLM
 from extra_tools import search_wikipedia, scrap_webpage
 from pydantic import BaseModel, Field
 from typing import List, TypedDict
