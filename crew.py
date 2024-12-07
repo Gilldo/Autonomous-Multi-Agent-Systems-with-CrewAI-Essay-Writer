@@ -2,7 +2,16 @@ from crewai import Agent, Task, Crew, Process, LLM
 from extra_tools import search_wikipedia, scrap_webpage
 from pydantic import BaseModel, Field
 from typing import List, TypedDict
-llm="claude-3-5-sonnet-20240620"
+#llm="claude-3-5-sonnet-20240620"
+
+
+# make custom llm
+llm= LLM(
+    model="anthropic/claude-3-5-sonnet-20240620",
+    base_url="https://openrouter.ai/api/v1",
+    llm_key=llm_key_input
+)
+
 
 class Paragraph(TypedDict):
     sub_header: str
